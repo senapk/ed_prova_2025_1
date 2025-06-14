@@ -1,0 +1,20 @@
+{
+  "name": "Universal Environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 1000
+      },
+      "extensions": [
+        "ms-python.python",
+        "golang.go",
+        "bierner.markdown-preview-github-styles",
+        "usernamehw.errorlens",
+        "jeff-hughes.open-terminal-here"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+remote: ../Readme.md
+version: 0.0.1
+database: src
+expanded: []
+tasks: {}
+flags:
+  minimum: 1
+  percent: 0
+  admin: 0
+  skills: 0
+  graph: 0
+new_items: []
+lang: go
+index: acompanhamento

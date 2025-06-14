@@ -1,0 +1,22 @@
+name: Autograding Tests
+on:
+- push
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  setup-environment: # Novo job de configuração
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run setup script
+      run: pipx install tko && feno grading --readme Readme.md
+    - name: Run setup script
+      run: ls -la .tko && tar -czvf tko.tgz .tko
+    - name: Upload tko.tgz
+      uses: actions/upload-artifact@v4 # Usa a action para upload de artefatos
+      with:
+        name: logs
+        path: tko.tgz
